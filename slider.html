@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.slider {
+  -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
+  height: 5em;
+}
+.slider div { height:100% }
+.slider .cell {
+border-color: gray;
+border-style: solid;
+border-width: 1px 1px 1px 0px;
+float:left;
+}
+.slider .cell:first-child { border-left-width: 1px}
+.slider > .cell0 {width: 20%;}.cell0 > div{background-color:#FF0D00}
+.slider >.cell1 {width: 15%;}.cell1 > div{background-color:#FF2300}
+.slider >.cell2 {width: 15%;}.cell2 > div{background-color:#CB009E}
+.slider .cell3 {width: 15%;}.cell3 > div{background-color:#D2008D}
+.slider .cell4 {width: 15%;}.cell4 > div{background-color:#FF8E00}
+.slider .cell5 {width: 10%;}.cell5 > div{background-color:#B1F400}
+.slider .cell6 {width: 10%;}.cell6 > div{background-color:#00D41A}
+.cell > div {width:0%;}
+#result {font-size: 3em;}
+
+.slider2{height: 10em}
+.slider2:before {
+border-bottom: 9em white solid;
+border-right: 14em white solid;
+border-bottom-right-radius: 173px;
+content: "";
+position: absolute;
+margin-left: -9px;
+margin-top: -12px;
+}
+
+* {
+box-sizing: border-box;
+text-size-adjust: none;
+-webkit-box-sizing: border-box;
+-webkit-text-size-adjust: none;
+-moz-box-sizing: border-box;
+-moz-text-size-adjust: none;
+}
+
+</style>
+</head>
+<body>
+  <div style="padding:0.5em; width:80%;">
+    <div id="slider" class="slider">
+      <div class="cell cell0"><div>&nbsp;</div></div>
+      <div class="cell cell1"><div>&nbsp;</div></div>
+      <div class="cell cell2"><div>&nbsp;</div></div>
+      <div class="cell cell3"><div>&nbsp;</div></div>
+      <div class="cell cell4"><div>&nbsp;</div></div>
+      <div class="cell cell5"><div>&nbsp;</div></div>
+      <div class="cell cell6"><div>&nbsp;</div></div>
+    </div>
+  </div>
+  <div id="result"></div>
+  <div style="padding:0.5em; width:20%;">
+    <div id="slider2" class="slider slider2">
+      <div class="cell cell0"><div>&nbsp;</div></div>
+      <div class="cell cell1"><div>&nbsp;</div></div>
+      <div class="cell cell2"><div>&nbsp;</div></div>
+      <div class="cell cell3"><div>&nbsp;</div></div>
+      <div class="cell cell4"><div>&nbsp;</div></div>
+      <div class="cell cell5"><div>&nbsp;</div></div>
+      <div class="cell cell6"><div>&nbsp;</div></div>
+    </div>
+  </div>
+  <div id="result2"></div>
+  <script src="slider.js"></script>
+</body>
+</html>

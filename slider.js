@@ -1,3 +1,4 @@
+var slider = {};
 (function(d){
     // IE compatibility stuff :-(
     var addListener = (function(w) {
@@ -19,9 +20,8 @@
         else                   ev.returnValue = false;
     };
 
-    var resultList = {0:"1", 1:"2", 2:"3", 3:"4", 4:"5", 5:"6", 6:"7"};
     var show = function(n, rs) {
-        rs.innerHTML = resultList[n];
+        rs(n);
     }
     var cellColored = function(cells, n) {
         for (var i=0;i<=n;i++) {
@@ -91,7 +91,7 @@
         };
         addListener(me, 'touchstart', tstart);
     };
-
-    addSliderEvents(d.getElementById('slider'), d.getElementById('result'), 1);
-    addSliderEvents(d.getElementById('slider2'), d.getElementById('result2'), 1);
+    slider.init = function(sliderDom, hundler, initalizeNum) {
+        addSliderEvents(sliderDom, hundler, initalizeNum);
+    };
 })(document);

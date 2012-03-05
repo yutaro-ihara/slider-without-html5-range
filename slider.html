@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
 <style>
@@ -26,16 +26,13 @@ float:left;
 
 .slider2{height: 10em}
 .slider2:before {
-border-bottom: 1px gray solid;
-border-right: 1px gray solid;
+border-bottom: 9em white solid;
+border-right: 14em white solid;
 border-bottom-right-radius: 173px;
 content: "";
 position: absolute;
-margin-left: 0px;
-margin-top: 0px;
-background-color: white;
-height: 8em;
-width: 17%;
+margin-left: -9px;
+margin-top: -12px;
 }
 
 * {
@@ -75,5 +72,17 @@ text-size-adjust: none;
   </div>
   <div id="result2"></div>
   <script src="slider.js"></script>
+  <script>
+    var resultList = [1,2,3,4,5,6,7];
+
+    slider.init(document.getElementById("slider"), (function(n){
+      var d = document.getElementById("result");
+      d.innerHTML = resultList[n];
+    }), 1);
+    slider.init(document.getElementById("slider2"), function(n){
+      var d = document.getElementById("result2");
+      d.innerHTML = resultList[n];
+    }, 1);
+  </script>
 </body>
 </html>
